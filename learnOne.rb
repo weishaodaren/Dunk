@@ -18,3 +18,17 @@ print <<'foo', <<'bar'
 foo
     I said bar.
 bar
+
+BEGIN {
+  puts 'this is setup'
+}
+
+END {
+  puts 'this is end'
+}
+
+=begin
+  
+hahahahhahahahhaahahha
+  
+end
