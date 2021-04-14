@@ -22,7 +22,7 @@ test_three{ p "Hello Ruby"}
 
 # & is important
 
-def test_four( &block)
+def test_four(&block)
     block.call
 end
 test_four { puts "Hello Rubbbyyyyy" }   
