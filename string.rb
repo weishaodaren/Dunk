@@ -2,8 +2,8 @@
 
 =begin
 
-downcase capitalize upcase chomp chop
-downcase! capitalize! upcase! chomp! chop! 修改本身
+downcase capitalize upcase chomp chop delete
+downcase! capitalize! upcase! chomp! chop! delete! 修改本身
 
 =end
 
@@ -24,5 +24,17 @@ bar = bar.casecmp(ur_string)              # 不区分大小写比较 -1 0 1
 bar = ur_string.chomp.center(100, 'asd')  #  居中 不够的 填充
 bar = ur_string.chomp                     # 去掉末尾的转义字符
 bar = bar.chop                            # 移除末尾字符
+bar = bar.concat('boring')                # 拼接
+bar = bar.count(bar, 'this')
 
 puts bar
+
+test = String.new('WEISHAODAREN')
+# test = test.crypt("Az9")    # 单项hsh加密
+test = test.delete('DAREN', 'DA')  # 删除多个参数的交集
+test = test.dump()  # 全部转译
+test = "test".each_char { |i|
+  puts i
+}
+
+test
