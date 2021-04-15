@@ -1,2 +1,3 @@
 # Dunk
-learn ruby
+
+learning ruby 💫
