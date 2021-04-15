@@ -30,11 +30,15 @@ bar = bar.count(bar, 'this')
 puts bar
 
 test = String.new('WEISHAODAREN')
-# test = test.crypt("Az9")    # 单项hsh加密
-test = test.delete('DAREN', 'DA')  # 删除多个参数的交集
-test = test.dump()  # 全部转译
-test = "test".each_char { |i|
+# test = test.crypt("Az9")                          # 单项hsh加密
+test = test.delete('DAREN', 'DA')                   # 删除多个参数的交集
+test = test.dump                                    # 全部转译
+test = "test".each_char { |i|                       # 遍历字符串
   puts i
 }
 
-test
+test = ''.empty?                                    # 判断是否为空
+test = 'WEISHAODAREN'.eql?('WEISHAODAREN')          # 判断是否长度 内容一致
+
+
+p test
