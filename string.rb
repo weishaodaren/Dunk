@@ -39,6 +39,8 @@ test = "test".each_char { |i|                       # 遍历字符串
 
 test = ''.empty?                                    # 判断是否为空
 test = 'WEISHAODAREN'.eql?('WEISHAODAREN')          # 判断是否长度 内容一致
-
+test = 'weishaodaren'.gsub!('wei', 'xixi')          # 替换 失败 => nil
+test = test[2] 
+test = 'weishaodaren'.hash                          # 返回一个基于字符串长度的hsh
 
 p test
