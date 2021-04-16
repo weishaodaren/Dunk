@@ -42,5 +42,10 @@ test = 'WEISHAODAREN'.eql?('WEISHAODAREN')          # 判断是否长度 内容�
 test = 'weishaodaren'.gsub!('wei', 'xixi')          # 替换 失败 => nil
 test = test[2] 
 test = 'weishaodaren'.hash                          # 返回一个基于字符串长度的hsh
+test = 'test'.include? 't'                          # 是否包含指定字符串
+test = 'weishaodaren'.index('daren')                # 查找指定索引
+test = 'weishaodaren'.insert(7, 'bushi')            # 插入字符串
+test = 'weishaodaren'.inspect                       # 返回可打印版本 带转译
+test = test.length
 
 p test
