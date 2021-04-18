@@ -47,5 +47,6 @@ test = 'weishaodaren'.index('daren')                # 查找指定索引
 test = 'weishaodaren'.insert(7, 'bushi')            # 插入字符串
 test = 'weishaodaren'.inspect                       # 返回可打印版本 带转译
 test = test.length
+test = test.ljust(2)
 
 p test
