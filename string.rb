@@ -47,6 +47,9 @@ test = 'weishaodaren'.index('daren')                # 查找指定索引
 test = 'weishaodaren'.insert(7, 'bushi')            # 插入字符串
 test = 'weishaodaren'.inspect                       # 返回可打印版本 带转译
 test = test.length
-test = test.ljust(2)
+test = " boring".ljust(20, '234')                   # 指定长度，超出部分第二个参数补充
+test = test.lstrip                                  # 移除前面空格 返回副本
+test = test.lstrip!                                 # 同上 没有 返回nil
+test = 'test'.replace('jijizhazha')                 # 替换
 
 p test
