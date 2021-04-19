@@ -2,8 +2,8 @@
 
 =begin
 
-downcase capitalize upcase chomp chop delete
-downcase! capitalize! upcase! chomp! chop! delete! 修改本身
+downcase capitalize upcase chomp chop delete reverse
+downcase! capitalize! upcase! chomp! chop! delete! reverse! 修改本身
 
 =end
 
@@ -51,5 +51,7 @@ test = " boring".ljust(20, '234')                   # 指定长度，超出部�
 test = test.lstrip                                  # 移除前面空格 返回副本
 test = test.lstrip!                                 # 同上 没有 返回nil
 test = 'test'.replace('jijizhazha')                 # 替换
+test = test.reverse                                 # 翻转
+test = test.reverse!
 
 p test
