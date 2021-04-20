@@ -17,6 +17,11 @@ ary = ary << {name: 'weisha0daren'} << 90 << [[[2]]]      # 数组末尾插入�
 ary = Array.[](100)*100 <=> ary
 ary = [1, 2, 3] === [2, 1, 3]                             # 全等比较
 ary = [1, 2, 3][0 ... 2]                                  # 数组取值
-# ary = [1, 2, 3].abbrev(1)
+# ary = [1, 2, 3]
+Array1 = ["Alphabets", "a", "b", "c", "d", "e"] 
+Array2 = ["Names", "gfg", "Geeks", "Geek", "GeeksforGeeks"] 
+Array3 = ["City", "Kolkata", "Mumbai", "Delhi", "Patna"] 
+ary = [Array1, Array2, Array3]
+ary = ary.assoc('Names')                                   # 多维数组 assoc == str 匹配到指定的数组
 
 p ary
