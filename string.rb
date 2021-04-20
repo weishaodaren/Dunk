@@ -2,8 +2,8 @@
 
 =begin
 
-downcase capitalize upcase chomp chop delete reverse squeeze strip sub succ/next swapcase
-downcase! capitalize! upcase! chomp! chop! delete! reverse! squeeze! strip! sub! succ!/next! swapcase! 修改本身
+downcase capitalize upcase chomp chop delete reverse squeeze strip sub succ/next swapcase tr tr_s
+downcase! capitalize! upcase! chomp! chop! delete! reverse! squeeze! strip! sub! succ!/next! swapcase! tr! tr_s! 修改本身
 
 =end
 
@@ -63,5 +63,11 @@ test = "wakawaka".sub(/a/, 'b') { |x| p x}          # 第一个参数的第一�
 test = "xiuxia".next                                # succ / next 继承 a => b
 test = test.sum                                     # 16进制
 test = "weishaodaren".swapcase.swapcase             # 大小写 反转
+test = '392342e3.324'.to_f                          # 浮点数
+test = '392342e3.324'.to_i                          # 整数
+test = test.to_s
+test = 'weishaodaren'.tr('wei', 'ab')               # 返回 str 的副本，把 from_str 中的字符替换为 to_str 中相对应的字符。如果 to_str 比 from_str 短，那么它会以最后一个字符进行填充。两个字符串都可以使用 c1.c2 符号表示字符的范围。如果 from_str 以 ^ 开头，则表示除了所列出的字符以外的所有字符
+test = 'weiwei'.tr_s('wei', 'da')                   # 替换重复的字符串
+test = 'a'.upto('d') { |x| p x}                     # 遍历 str~参数 => block
 
 p test
