@@ -38,4 +38,13 @@ ary = ['weishaodaren', 'is', 'fuckin', 'real'].delete_if { # 如果block为true,
 ary = Array3.each do |i| 
     p i
 end
+ary = ary.each_index { |index| p index }                    # 同 each 不过传递的是 index
+ary = ary.empty?                                            # 判断是否为空
+ary = Array3.eql?('City')                                   # 是否相同
+ary = Array3.fetch(1)                                       # 返回索引值
+ary = Array3.fill('love')                                   # 填充参数
+ary = Array3.fill(1 .. 3) { |index| p index}                # 填充除参数范围内 
+ary = Array3.fill(0, 3) { |index| p index}                  # 填充除参数范围内 同上 
+                 
+
 p ary
