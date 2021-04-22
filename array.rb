@@ -6,8 +6,8 @@ names = Array.[](1, 2, 3, 4, 5)  #  names = Array[1, 2, 3, 4, 5]
 
 names = Array(0 ... 9).at(6)
 
-# map/collect compact flatten reject
-# map!/collect! compact! flatten! reject! 修改本身
+# map/collect compact flatten reject reverse
+# map!/collect! compact! flatten! reject! reverse！ 修改本身
 
 ary = Array.[](1, 2, 3)
 ary = ary & [2]                                           # & 交集
@@ -51,7 +51,7 @@ ary = ary.frozen?                                           # 判断是否被冻
 ary = Array2.hash
 ary = Array2.include?('Names')                              # 判断是否包含
 print "this is =====================================================\n"
-ary = Array2.index('Names')                                 # 查找参数在数组中的索引 没有 => nil
+ary = Array2.index('Names')                                 # 查找参数在数组中的索引 没有 => nil  同rindex
 ary = Array2.insert(-1, 'WEISHAODAREN')                     # 插入指定位置的参数 可以是负值
 ary = ary.inspect                                           # 创建一个可打印的数组
 ary = Array2.join('$')                                      # 返回指定参数切割的字符串
@@ -61,7 +61,9 @@ ary = Array2.push('WEISHAODAREN')
 Array4 = [['name', 'weishaodaren'], ['age', 26], ['sex', false]]
 ary = Array4.rassoc('weishaodaren')                         # == 匹配第二个参数若有返回数组
 ary = [false, false].reject { |item| p item}                # 返回一个新的 不为true 的数组
-p Array2
-ary = Array2.replace(['xix'])
+ary = Array2.replace(['xix'])                               # 替换 修改原数组
+ary = Array4.flatten.reverse                                # 返回倒叙排列的数组
+ary = Array4.flatten.reverse_each { |item| p item}          # 逆转遍历
+ary = Array4.flatten.rindex('weishaodaren')                 # 同index 从后往前找
 
 p ary
