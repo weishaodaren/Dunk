@@ -6,8 +6,8 @@ names = Array.[](1, 2, 3, 4, 5)  #  names = Array[1, 2, 3, 4, 5]
 
 names = Array(0 ... 9).at(6)
 
-# map/collect compact
-# map!/collect! compact! 修改本身
+# map/collect compact flatten reject
+# map!/collect! compact! flatten! reject! 修改本身
 
 ary = Array.[](1, 2, 3)
 ary = ary & [2]                                           # & 交集
@@ -45,6 +45,23 @@ ary = Array3.fetch(1)                                       # 返回索引值
 ary = Array3.fill('love')                                   # 填充参数
 ary = Array3.fill(1 .. 3) { |index| p index}                # 填充除参数范围内 
 ary = Array3.fill(0, 3) { |index| p index}                  # 填充除参数范围内 同上 
-                 
+ary = Array2.first(2)                                       # 返回数组的前n个元素 不带参数 返回第一个  同last 
+ary = [[Array2]].flatten                                    # 返回一个一维数组(扁平化)
+ary = ary.frozen?                                           # 判断是否被冻结
+ary = Array2.hash
+ary = Array2.include?('Names')                              # 判断是否包含
+print "this is =====================================================\n"
+ary = Array2.index('Names')                                 # 查找参数在数组中的索引 没有 => nil
+ary = Array2.insert(-1, 'WEISHAODAREN')                     # 插入指定位置的参数 可以是负值
+ary = ary.inspect                                           # 创建一个可打印的数组
+ary = Array2.join('$')                                      # 返回指定参数切割的字符串
+ary = Array2.length
+ary = Array2.pop                                            # 返回删除的元素
+ary = Array2.push('WEISHAODAREN')
+Array4 = [['name', 'weishaodaren'], ['age', 26], ['sex', false]]
+ary = Array4.rassoc('weishaodaren')                         # == 匹配第二个参数若有返回数组
+ary = [false, false].reject { |item| p item}                # 返回一个新的 不为true 的数组
+p Array2
+ary = Array2.replace(['xix'])
 
 p ary
