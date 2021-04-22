@@ -74,5 +74,7 @@ ary = Array4.flatten.to_ary                                 # return self
 ary = Array4.flatten.to_s                                   # => string `[]`
 ary = Array4.transpose                                      # [[]] 置换行列
 ary = Array4.flatten.push('weishaodaren').uniq              # 去重
+ary = Array4.unshift('wo','shi','shei')
+ary = Array4.zip([1, 2])                                    # 一一对应
 
 p ary
