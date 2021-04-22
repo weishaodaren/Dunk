@@ -6,8 +6,8 @@ names = Array.[](1, 2, 3, 4, 5)  #  names = Array[1, 2, 3, 4, 5]
 
 names = Array(0 ... 9).at(6)
 
-# map/collect compact flatten reject reverse slice
-# map!/collect! compact! flatten! reject! reverse! slice! 修改本身
+# map/collect compact flatten reject reverse slice uniq
+# map!/collect! compact! flatten! reject! reverse! slice! uniq! 修改本身
 
 ary = Array.[](1, 2, 3)
 ary = ary & [2]                                           # & 交集
@@ -69,5 +69,10 @@ print "()*()*)(*)(*)(\n"
 ary = Array4.flatten.select { |i| p i}                      # 返回包含为true的元素
 ary = Array4.flatten.shift()                                # 同pop 删除开头并返回元素 
 ary = Array4.flatten.slice(1 .. 2)                          # 返回截取的元素的数组
+ary = Array4.flatten.to_a                                   # 转换 ary
+ary = Array4.flatten.to_ary                                 # return self
+ary = Array4.flatten.to_s                                   # => string `[]`
+ary = Array4.transpose                                      # [[]] 置换行列
+ary = Array4.flatten.push('weishaodaren').uniq              # 去重
 
 p ary
