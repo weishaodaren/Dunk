@@ -11,3 +11,8 @@ months = {"1" => "January", "2" => "February"}
 keys = months.keys
 
 puts "#{keys}"
+
+p H == months                 # 相等
+p H['a'] = 10000              # 关联 赋值
+p "#{H.clear}"                # 清空
+p H.default('a')
