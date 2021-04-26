@@ -2,4 +2,5 @@
 
 learning ruby 💫
 is hard...
- slowly 🐱‍🐉
+slowly 🐱‍🐉
+. . . . daily
