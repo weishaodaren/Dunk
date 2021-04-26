@@ -28,4 +28,7 @@ A2 = Hash.[]'a' => 1, 'b' => 2
 A2.each {|k, v| p k,v }
 A2.each_key {|key| p key }     # 传递key作为参数 block 同value
 p A2.empty?                    # 是否为空
-A2.fetch('a'){ | key| p key}
+p A2.fetch('a')                # 查找给定key的value block
+p A2.key?('a')                 # 查找是否存在指定的key 同 .include? .has_key? .member?
+p A2.value?(1)                 # 查找是否存在指定的value
+# p A2.index(1)  ???
