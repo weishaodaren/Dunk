@@ -26,3 +26,4 @@ A1.delete_if { |key, value| p "{key:#{key}, value:#{value}}" } # 同delete 为tr
 
 A2 = Hash.[]'a' => 1, 'b' => 2
 A2.each {|k, v| p k,v }
+A2.each_key {|key| p key }     #  传递key作为参数 block
