@@ -31,4 +31,6 @@ p A2.empty?                    # 是否为空
 p A2.fetch('a')                # 查找给定key的value block
 p A2.key?('a')                 # 查找是否存在指定的key 同 .include? .has_key? .member?
 p A2.value?(1)                 # 查找是否存在指定的value
-# p A2.index(1)  ???  18
+# p A2.index('a')  
+p A2.inspect                   # 返回hsh打印字符串版本
+p A2.invert                    # 键值对 反转
