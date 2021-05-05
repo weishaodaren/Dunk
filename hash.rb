@@ -28,6 +28,7 @@ A1 = Hash.[]'a' => 1, 'b' => 2
 A1.delete_if { |key, value| p "{key:#{key}, value:#{value}}" } # 同delete 为true删除
 
 A2 = Hash.[]'a' => 1, 'b' => 2
+A3  =Hash.[]'name' => 'weishaodaren', 'age' => 26
 A2.each {|k, v| p k,v }
 A2.each_key {|key| p key }     # 传递key作为参数 block 同value
 p A2.empty?                    # 是否为空
@@ -41,3 +42,14 @@ p A2.keys                      # 返回所有key的数组
 p A2.length                    # 返回长度 大小 同 size
 p A2.merge('c' => 3, 'a' => 4) # 重写hash
 p A2.rehash                    # 重新引用
+p A2.replace('a' => '21')      # 整个替换
+p A2.select { |key, value|  key == 'a' }   # 返回一个新的数组
+p A3.shift                     # 移除开头的键值对 返回二元素数组
+p A3.sort                      # 转换成二维数组 再排序
+p A3.store('age', 26)          # 存储 hash 中的一个键值对
+p A3.to_a                      # 转换二维数组
+p A3.to_hash                   # 转换为hash
+p A3.to_s                      # 转换为字符串
+p A3.value?(26)                # 检查hash 是否包含指定value
+p A3.values                    # 返回一个新的数组 包含hash的所有值
+p A3.values_at()               # 返回新的数组 包含指定相关的值
