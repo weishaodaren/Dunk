@@ -12,6 +12,9 @@ keys = months.keys
 
 puts "#{keys}"
 
+# merge
+# merge! 改变自身
+
 p H == months                 # 相等
 p H['a'] = 10000              # 关联 赋值
 p "#{H.clear}"                # 清空
@@ -34,3 +37,7 @@ p A2.value?(1)                 # 查找是否存在指定的value
 # p A2.index('a')  
 p A2.inspect                   # 返回hsh打印字符串版本
 p A2.invert                    # 键值对 反转
+p A2.keys                      # 返回所有key的数组
+p A2.length                    # 返回长度 大小 同 size
+p A2.merge('c' => 3, 'a' => 4) # 重写hash
+p A2.rehash                    # 重新引用
