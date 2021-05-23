@@ -10,3 +10,4 @@ time3 = Time.local(2008, 7, 8)
 p time3
 
 p time1.to_a  # [sec, min, hour, day, month, year, wday, yday, isdst, zone]
+p time1.utc_offset
