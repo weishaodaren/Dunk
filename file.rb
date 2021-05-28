@@ -37,3 +37,36 @@ IO.foreach('input.txt'){
  |block| puts block
 }
 
+file = File.new('input.txt', 'w')
+file.chmod(0700)
+
+File.open('input.txt') if File::exists?('input.txt')
+
+# 是否是文件
+puts File.file?('file.rb')
+
+# 是否是目录
+puts File::directory?('/usr/local/bin')
+puts File::directory?('input.txt')
+
+p File.readable?('file.rb') # 可读
+p File.writable?('file.rb') # 可写
+p File.executable?('file.rb') # 可执行
+
+p File.size?('file.rb')
+p File.zero?('input.txt')
+
+p File::ftype('../Dunk')  # 文件类型
+
+p File::ctime('./array.rb') # 创建时间
+p File::mtime('./array.rb') # 修改时间
+p File::atime('./array.rb') # 最后访问时间
+
+p Dir.pwd # 当前目录
+p Dir['/Dunk/block.rb']
+
+require 'tempfile'
+f = Tempfile.new('tingtong')
+f.puts "Hello"
+puts f.path
+f.close
