@@ -65,6 +65,7 @@ p File::atime('./array.rb') # 最后访问时间
 p Dir.pwd # 当前目录
 p Dir['/Dunk/block.rb']
 
+# 创建临时文件
 require 'tempfile'
 f = Tempfile.new('tingtong')
 f.puts "Hello"
